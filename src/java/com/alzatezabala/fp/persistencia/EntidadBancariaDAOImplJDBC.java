@@ -32,7 +32,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
         ResultSet resultSet;
         Connection connection = connectionFactory.getConnection();
         try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM entidadbancaria WHERE id = ?");
+            preparedStatement = connection.prepareStatement("SELECT * FROM entidadbancaria WHERE idEntidadBancaria = ?");
             preparedStatement.setInt(1, id);
             resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
@@ -40,7 +40,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
                 entidadBancaria.setNombre(resultSet.getString("nombre"));
                 entidadBancaria.setFechaCreacion(resultSet.getDate("fechaCreacion"));
                 entidadBancaria.setCodigoEntidad(resultSet.getString("codigoEntidad"));
-                entidadBancaria.setIdEntidad(resultSet.getInt("id"));
+                entidadBancaria.setIdEntidad(resultSet.getInt("idEntidadBancaria"));
 
                 if (resultSet.next()) {
                     throw new RuntimeException("Devuelve mas de una fila");
@@ -92,7 +92,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
         Connection connection = connectionFactory.getConnection();
 
         try {
-            preparedStatement = connection.prepareStatement("UPDATE entidadbancaria set nombre=?, codigoEntidad=? WHERE id=?");
+            preparedStatement = connection.prepareStatement("UPDATE entidadbancaria set nombre=?, codigoEntidad=? WHERE idEntidadBancaria=?");
             preparedStatement.setString(1, entidad.getNombre());
             preparedStatement.setString(2, entidad.getCodigoEntidad());
             preparedStatement.setInt(3, entidad.getIdEntidad());
@@ -112,7 +112,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
         Connection connection = connectionFactory.getConnection();
 
         try {
-            preparedStatement = connection.prepareStatement("DELETE FROM entidadbancaria WHERE id=?");
+            preparedStatement = connection.prepareStatement("DELETE FROM entidadbancaria WHERE idEntidadBancaria=?");
             preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
             int rows = preparedStatement.getUpdateCount();
