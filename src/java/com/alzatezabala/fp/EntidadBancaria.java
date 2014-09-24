@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.alzatezabala.fp;
 
 import java.beans.PropertyChangeSupport;
@@ -14,16 +13,17 @@ import java.util.Date;
  * @author eslem
  */
 public class EntidadBancaria {
+
     private int idEntidad;
     private String nombre;
-    private String codigoEntrada;
+    private String codigoEntidad;
     private Date fechaCreacion;
-    
-    public EntidadBancaria(int idEntidad, String name, String cEntrada){
-        this.idEntidad=idEntidad;
-        this.nombre=name;
-        this.codigoEntrada=cEntrada;
-        this.fechaCreacion=new Date();
+
+    public EntidadBancaria(int idEntidad, String name, String cEntidad) {
+        this.idEntidad = idEntidad;
+        this.nombre = name;
+        this.codigoEntidad = cEntidad;
+        this.fechaCreacion = new Date();
     }
 
     public EntidadBancaria() {
@@ -38,8 +38,8 @@ public class EntidadBancaria {
         this.nombre = nombre;
     }
 
-    public void setCodigoEntrada(String codigoEntrada) {
-        this.codigoEntrada = codigoEntrada;
+    public void setCodigoEntidad(String codigoEntidad) {
+        this.codigoEntidad = codigoEntidad;
     }
 
     public void setFechaCreacion(Date fechaCreacion) {
@@ -54,13 +54,12 @@ public class EntidadBancaria {
         return nombre;
     }
 
-    public String getCodigoEntrada() {
-        return codigoEntrada;
-    }
-
     public Date getFechaCreacion() {
         return fechaCreacion;
     }
-        
-    
+
+    public String getCodigoEntidad() {
+        return codigoEntidad; //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

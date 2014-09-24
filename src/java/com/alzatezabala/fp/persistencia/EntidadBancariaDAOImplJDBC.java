@@ -39,7 +39,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
                 entidadBancaria = new EntidadBancaria();
                 entidadBancaria.setNombre(resultSet.getString("nombre"));
                 entidadBancaria.setFechaCreacion(resultSet.getDate("fechaCreacion"));
-                entidadBancaria.setCodigoEntrada(resultSet.getString("codigoEntrada"));
+                entidadBancaria.setCodigoEntidad(resultSet.getString("codigoEntidad"));
                 entidadBancaria.setIdEntidad(resultSet.getInt("id"));
 
                 if (resultSet.next()) {
@@ -62,9 +62,9 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
         PreparedStatement preparedStatement;
         Connection connection = connectionFactory.getConnection();
         try {
-            preparedStatement = connection.prepareStatement("INSERT INTO entidadbancaria(nombre, fechaCreacion, codigoEntrada) VALUES(?,?,?)", Statement.RETURN_GENERATED_KEYS);
+            preparedStatement = connection.prepareStatement("INSERT INTO entidadbancaria(nombre, fechaCreacion, codigoEntidad) VALUES(?,?,?)", Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, entidad.getNombre());
-            preparedStatement.setString(3, entidad.getCodigoEntrada());
+            preparedStatement.setString(3, entidad.getCodigoEntidad());
             preparedStatement.setDate(2, new java.sql.Date(new Date().getTime()));
 
             int rows = preparedStatement.executeUpdate();
@@ -92,10 +92,12 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
         Connection connection = connectionFactory.getConnection();
 
         try {
-            preparedStatement = connection.prepareStatement("UPDATE entidadbancaria set nombre=?, codigoentrada=? WHERE id=?");
+            preparedStatement = connection.prepareStatement("UPDATE entidadbancaria set nombre=?, codigoEntidad=? WHERE id=?");
             preparedStatement.setString(1, entidad.getNombre());
-            preparedStatement.setString(2, entidad.getCodigoEntrada());
+            preparedStatement.setString(2, entidad.getCodigoEntidad());
             preparedStatement.setInt(3, entidad.getIdEntidad());
+            
+            preparedStatement.executeUpdate();
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
         }
@@ -138,7 +140,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
                 EntidadBancaria entidadBancaria = new EntidadBancaria();
                 entidadBancaria.setNombre(resultSet.getString("nombre"));
                 entidadBancaria.setFechaCreacion(resultSet.getDate("fechaCreacion"));
-                entidadBancaria.setCodigoEntrada(resultSet.getString("codigoEntrada"));
+                entidadBancaria.setCodigoEntidad(resultSet.getString("codigoEntidad"));
                 entidadBancaria.setIdEntidad(resultSet.getInt("id"));
                 listaEntidadBancaria.add(entidadBancaria);
             }
