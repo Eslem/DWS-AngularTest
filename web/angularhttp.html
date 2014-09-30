@@ -14,31 +14,36 @@ and open the template in the editor.
         <script src="lib/jquery/jquery.min.js"></script>  
         <script src="lib/angular/angular.js"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-        
+
         <script src="js/angularhttp.js"></script>
     </head>
     <body>
         <div class="container" ng-controller="EntidadBancariaController">
-            <h3 class="primary">Entidad Bancaria</h3>
+
             <div class="row">
-                <div class="col-md-3">
-                    <label>Nombre:</label>
-                    <label class="text-muted">{{entidadBancaria.nombre}}</label>
-               </div>
+                <div class="col-md-5">
+                    <h3 class="primary">Entidad Bancaria</h3>
+                    <div class="row">
+                        <label>Nombre:</label>
+                        <input ng-model="entidadBancaria.nombre" class="form-control">
+                    </div>
+                    <div class="row">
+                        <label>Codigo Entidad:</label>
+                        <input ng-model="entidadBancaria.codigoEntidad" class="form-control">
+                    </div>
+                    <div class="row">
+                        <label>Fecha Creacion:</label>
+                        <input ng-model="entidadBancaria.fechaCreacion" class="form-control">
+                    </div>
+                    <div class="row" style="margin-top: 10px; margin-left: 15px">
+                        <button class="btn btn-primary" ng-click="update(iten, $event)">Actualizar Entidad</button>
+                        <button class="btn btn-danger" ng-click="delete(iten, $event)">Eliminar Entidad</button>
+                    </div>
+                </div>
+                <div class="col-md-5" style="margin-top: 80px">
+                    <img src="images/728.GIF" alt="loading" ng-show="loading">
+                </div>
             </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <label>Codigo Entidad:</label>
-                     <label class="text-muted">{{entidadBancaria.codigoEntidad}}</label>
-               </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <label>Fecha Creacion:</label>
-                     <label class="text-muted">{{entidadBancaria.fechaCreacion}}</label>
-               </div>
-            </div>
-            
         </div>
     </body>
 </html>

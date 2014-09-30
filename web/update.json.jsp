@@ -4,6 +4,10 @@
     Author     : eslem
 --%>
 
+<%@page import="com.alzatezabala.fp.json.JSONConverterImplJackson"%>
+<%@page import="com.alzatezabala.fp.json.JSONConverter"%>
+<%@page import="com.alzatezabala.fp.json.JSONConverter"%>
+<%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAOImplDataSource"%>
 <%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAOImplJDBC"%>
 <%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAO"%>
 <%@page import="com.alzatezabala.fp.EntidadBancaria"%>
@@ -18,15 +22,12 @@
     entidadBancaria.setIdEntidad(idEntidadBancaria);
     entidadBancaria.setCodigoEntidad(codigoEntidad);
     
-    EntidadBancariaDAO entidadBancariaDAO= new EntidadBancariaDAOImplJDBC();
+    EntidadBancariaDAO entidadBancariaDAO= new EntidadBancariaDAOImplDataSource();
     entidadBancaria= entidadBancariaDAO.update(entidadBancaria);
+    
+    JSONConverter jsonConverter = new JSONConverterImplJackson();
+    out.print(jsonConverter.toJSON(entidadBancaria));
 
 %>
 
-{
-"idEntidadBancaria":<%=entidadBancaria.getIdEntidad()%>,
-"nombre":<%=entidadBancaria.getNombre()%>,
-"codigoEntidad": <%=entidadBancaria.getCodigoEntidad()%>,
-"fechaResultado": <%=entidadBancaria.getFechaCreacion()%>
-}
 

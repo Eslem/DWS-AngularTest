@@ -3,6 +3,7 @@
     Created on : Sep 17, 2014, 11:53:34 AM
     Author     : eslem
 --%>
+<%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAOImplDataSource"%>
 <%@page import="com.alzatezabala.fp.json.JSONConverterImplGson"%>
 <%@page import="com.alzatezabala.fp.json.JSONConverterImplJackson"%>
 <%@page import="com.alzatezabala.fp.json.JSONConverter"%>
@@ -12,7 +13,7 @@
 <%
     int idEntidadBancaria = Integer.parseInt(request.getParameter("idEntidadBancaria"));
 
-    EntidadBancariaDAO entidadBancariaDAO = new EntidadBancariaDAOImplJDBC();
+    EntidadBancariaDAO entidadBancariaDAO = new EntidadBancariaDAOImplDataSource();
     EntidadBancaria entidadBancaria = entidadBancariaDAO.get(idEntidadBancaria);
     
     JSONConverter jsonConverter= new JSONConverterImplJackson();
