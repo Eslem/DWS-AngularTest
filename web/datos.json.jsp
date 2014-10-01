@@ -1,7 +1,7 @@
+<%@page import="com.alzatezabala.fp.pojo.EntidadBancaria"%>
+<%@page import="com.alzatezabala.fp.persistencia.impl.EntidadBancariaDAOImplJDBC"%>
 <%@page import="java.util.List"%>
 <%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAO"%>
-<%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAOImplJDBC"%>
-<%@page import="com.alzatezabala.fp.EntidadBancaria"%>
 <%
     EntidadBancariaDAO entidadBancariaDAO= new EntidadBancariaDAOImplJDBC();
     //EntidadBancaria entidadBancaria = entidadBancariaDAO.get(1);

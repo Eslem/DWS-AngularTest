@@ -3,13 +3,11 @@
     Created on : Sep 17, 2014, 11:53:34 AM
     Author     : eslem
 --%>
-<%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAOImplDataSource"%>
-<%@page import="com.alzatezabala.fp.json.JSONConverterImplGson"%>
-<%@page import="com.alzatezabala.fp.json.JSONConverterImplJackson"%>
-<%@page import="com.alzatezabala.fp.json.JSONConverter"%>
-<%@page import="com.alzatezabala.fp.EntidadBancaria"%>
+<%@page import="com.alzatezabala.fp.presentacion.json.JSONConverterImplJackson"%>
+<%@page import="com.alzatezabala.fp.presentacion.json.JSONConverter"%>
+<%@page import="com.alzatezabala.fp.pojo.EntidadBancaria"%>
+<%@page import="com.alzatezabala.fp.persistencia.impl.EntidadBancariaDAOImplDataSource"%>
 <%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAO"%>
-<%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAOImplJDBC"%>
 <%
     int idEntidadBancaria = Integer.parseInt(request.getParameter("idEntidadBancaria"));
 

@@ -4,14 +4,12 @@
     Author     : eslem
 --%>
 
-<%@page import="com.alzatezabala.fp.json.JSONConverterImplJackson"%>
-<%@page import="com.alzatezabala.fp.json.JSONConverter"%>
-<%@page import="com.alzatezabala.fp.json.JSONConverter"%>
-<%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAOImplDataSource"%>
-<%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAOImplJDBC"%>
+<%@page import="com.alzatezabala.fp.persistencia.impl.EntidadBancariaDAOImplJDBC"%>
+<%@page import="com.alzatezabala.fp.presentacion.json.JSONConverterImplJackson"%>
+<%@page import="com.alzatezabala.fp.presentacion.json.JSONConverter"%>
+<%@page import="com.alzatezabala.fp.pojo.EntidadBancaria"%>
+<%@page import="com.alzatezabala.fp.persistencia.impl.EntidadBancariaDAOImplDataSource"%>
 <%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAO"%>
-<%@page import="com.alzatezabala.fp.EntidadBancaria"%>
-<%@page import="com.alzatezabala.fp.EntidadBancaria"%>
 <%
     int idEntidadBancaria= Integer.parseInt(request.getParameter("idEntidadBancaria"));
     String nombre= request.getParameter("nombre");
