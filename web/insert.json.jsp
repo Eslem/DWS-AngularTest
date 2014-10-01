@@ -4,10 +4,11 @@
     Author     : eslem
 --%>
 
-<%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAOImplJDBC"%>
+<%@page import="com.alzatezabala.fp.pojo.EntidadBancaria"%>
+<%@page import="com.alzatezabala.fp.pojo.EntidadBancaria"%>
+<%@page import="com.alzatezabala.fp.pojo.EntidadBancaria"%>
+<%@page import="com.alzatezabala.fp.persistencia.impl.EntidadBancariaDAOImplJDBC"%>
 <%@page import="com.alzatezabala.fp.persistencia.EntidadBancariaDAO"%>
-<%@page import="com.alzatezabala.fp.EntidadBancaria"%>
-<%@page import="com.alzatezabala.fp.EntidadBancaria"%>
 <%
     String nombre= request.getParameter("nombre");
     String codigoEntidad= request.getParameter("codigoEntidad");

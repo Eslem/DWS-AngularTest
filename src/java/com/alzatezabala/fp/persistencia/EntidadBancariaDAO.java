@@ -6,7 +6,7 @@
 
 package com.alzatezabala.fp.persistencia;
 
-import com.alzatezabala.fp.EntidadBancaria;
+import com.alzatezabala.fp.pojo.EntidadBancaria;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

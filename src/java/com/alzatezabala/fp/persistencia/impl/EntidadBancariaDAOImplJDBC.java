@@ -5,7 +5,7 @@
  */
 package com.alzatezabala.fp.persistencia.impl;
 
-import com.alzatezabala.fp.EntidadBancaria;
+import com.alzatezabala.fp.pojo.EntidadBancaria;
 import com.alzatezabala.fp.persistencia.ConnectionFactory;
 import com.alzatezabala.fp.persistencia.EntidadBancariaDAO;
 import java.sql.Connection;

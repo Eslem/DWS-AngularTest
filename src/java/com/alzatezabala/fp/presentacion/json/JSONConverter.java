@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.alzatezabala.fp.json;
+package com.alzatezabala.fp.presentacion.json;
 
 /**
  *

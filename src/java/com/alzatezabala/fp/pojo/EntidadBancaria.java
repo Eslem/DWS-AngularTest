@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alzatezabala.fp;
+package com.alzatezabala.fp.pojo;
 
 import java.beans.PropertyChangeSupport;
 import java.util.Date;
