@@ -7,6 +7,8 @@
     <property name="docs.dir" location="docs" />
     <property name="webapps.dir" location="webapps" />
     
+    <property name="tomcat-home" value="C:\Program Files\Apache Software Foundation\Tomcat 8.0" />
+    
     <property name="builder" value="eslem" />
     <property name="war-file-name" value="${project-name}.war" />
     <property name="web-directory" value="web" />
@@ -34,14 +36,19 @@
     
     <path id="compile.classpath">
         <fileset dir="lib">
-            <include name="*.jar"/>
+            <include name="**/*.jar"/>
         </fileset>
+       
+        
+        <fileset includes="*.jar" dir="${tomcat-home}/bin" />
+                <fileset includes="*.jar" dir="${tomcat-home}/lib" />
     </path>
-
+    
     <!-- Compiles the java code (including the usage of library for JUnit -->
     <target name="compile" depends="clean, makedir">
         <javac srcdir="${src.dir}" destdir="${build.dir}">
             <classpath refid="compile.classpath"/>
+            
         </javac>
 
     </target>
