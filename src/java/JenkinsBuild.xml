@@ -40,8 +40,7 @@
         </fileset>
        
         
-        <fileset includes="*.jar" dir="${tomcat-home}/bin" />
-                <fileset includes="*.jar" dir="${tomcat-home}/lib" />
+       
     </path>
     
     <!-- Compiles the java code (including the usage of library for JUnit -->
