@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alzatezabala.fp.persistencia;
+package com.alzatezabala.fp.persistencia.impl;
 
+import com.alzatezabala.fp.persistencia.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
