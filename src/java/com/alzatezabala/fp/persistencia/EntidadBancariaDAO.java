@@ -7,11 +7,6 @@
 package com.alzatezabala.fp.persistencia;
 
 import com.alzatezabala.fp.pojo.EntidadBancaria;
-
-/**
- *
- * @author eslem
- */
 public interface EntidadBancariaDAO extends GenericDAO<EntidadBancaria>{
     
 }

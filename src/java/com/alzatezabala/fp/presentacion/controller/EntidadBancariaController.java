@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package com.alzatezabala.fp.presentacion.controller;
-
 import com.alzatezabala.fp.persistencia.EntidadBancariaDAO;
 import com.alzatezabala.fp.persistencia.impl.EntidadBancariaDAOImplDataSource;
 import com.alzatezabala.fp.pojo.EntidadBancaria;
@@ -59,5 +58,4 @@ public class EntidadBancariaController {
     }
     
     
-
 }

@@ -43,6 +43,10 @@
        
     </path>
     
+<<<<<<< HEAD
+=======
+    <!-- Compiles the java code (including the usage of library for JUnit -->
+>>>>>>> d05dd87cb3b0486b26f81d33f5a3670cda01b515
     <target name="compile" depends="clean, makedir">
         <javac srcdir="${src.dir}" destdir="${build.dir}">
             <classpath refid="compile.classpath"/>
@@ -51,14 +55,25 @@
 
     </target>
 
+<<<<<<< HEAD
     <target name="docs" depends="compile">
         <javadoc packagenames="src" sourcepath="${src.dir}" destdir="${docs.dir}">
+=======
+    <!-- Creates Javadoc -->
+    <target name="docs" depends="compile">
+        <javadoc packagenames="src" sourcepath="${src.dir}" destdir="${docs.dir}">
+            <!-- Define which files / directory should get included, we include all -->
+>>>>>>> d05dd87cb3b0486b26f81d33f5a3670cda01b515
             <fileset dir="${src.dir}">
                 <include name="**" />
             </fileset>
         </javadoc>
     </target>
 
+<<<<<<< HEAD
+=======
+    <!--Creates the deployable jar file  -->
+>>>>>>> d05dd87cb3b0486b26f81d33f5a3670cda01b515
     <target name="jar" depends="compile">
         <jar destfile="${dist.dir}\com.example.ant.jar" basedir="${build.dir}"
              includes="lib">

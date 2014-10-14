@@ -8,8 +8,11 @@
 ">
   
     <context:annotation-config/>
+<<<<<<< HEAD
     
     <bean class="com.alzatezabala.fp.persistencia.impl.EntidadBancariaDAOImplDataSource" />
+=======
+>>>>>>> d05dd87cb3b0486b26f81d33f5a3670cda01b515
   
  
  
